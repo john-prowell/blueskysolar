@@ -1,0 +1,124 @@
+.form {
+  &__header {
+    color: $color-white;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  &__group {
+    float: left;
+    width: 50%;
+    margin-bottom: 2rem;
+
+    @include responsive(LG) {
+      // 1024px
+      margin-bottom: 1rem;
+    }
+
+    @include responsive(SM) {
+      margin-bottom: 0;
+    }
+
+    &:not(:nth-child(even)) {
+      padding-right: 2rem;
+
+      @include responsive(SM) {
+        padding-right: 0;
+      }
+    }
+
+    @include responsive(SM) {
+      float: none;
+      width: 100%;
+    }
+  }
+
+  &__input,
+  &__select {
+    width: 100%;
+    font-size: 1.6rem;
+    padding: 1.25rem 1.5rem;
+    outline: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+
+    @include responsive(LG) {
+      // 1024px
+      font-size: 1.4rem;
+      padding: 1rem 1rem;
+      border-bottom: 2px solid transparent;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+      border-bottom: 3px solid $color-primary-blue;
+
+      @include responsive(LG) {
+        // 1024px
+        border-bottom: 2px solid $color-primary-blue;
+      }
+    }
+  }
+
+  &__select {
+    @include responsive(SM) {
+      margin-bottom: 2.4rem;
+    }
+  }
+
+  &__label {
+    color: $color-white;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-left: 1.4rem;
+    transition: all 0.5s;
+
+    @include responsive(SM) {
+      font-size: 1.25rem;
+      margin-left: 1rem;
+    }
+
+    &--hidden {
+      display: none;
+    }
+  }
+
+  &__input:placeholder-shown + &__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem);
+  }
+
+  &__disclaimer {
+    float: left;
+  }
+
+  &__button {
+    float: right;
+
+    @include responsive(LG) {
+      // 1024px
+      margin-top: 2rem;
+    }
+
+    @include responsive(SM) {
+      float: none;
+      display: block;
+      margin: 6rem auto 0;
+    }
+  }
+
+  &__disclaimer p {
+    font-size: 1.6rem;
+    color: $color-white;
+
+    @include responsive(LG) {
+      // 1024px
+      font-size: 1.4rem;
+    }
+
+    @include responsive(SM) {
+      float: none;
+    }
+  }
+}

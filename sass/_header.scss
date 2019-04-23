@@ -1,0 +1,148 @@
+.header {
+  height: 100vh;
+  background-image: url('../img/hero.jpeg');
+  background-size: cover;
+  background-position: top;
+  position: relative;
+
+  &__nav {
+    width: 100%;
+    padding: 2.5rem 2rem;
+
+    @include responsive(MD) {
+      padding: 1.5rem 2rem;
+    }
+
+    &--scrolled {
+      background-color: $color-primary-blue;
+      position: fixed;
+      padding: 1.5rem 2rem;
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+      z-index: 150;
+    }
+  }
+
+  &__nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+
+    @include responsive(MD) {
+      flex-direction: column;
+    }
+  }
+
+  &__logo {
+    width: 20rem;
+    height: 3.25rem;
+    fill: $color-white;
+
+    @include responsive(SM) {
+      width: 15rem;
+      height: 2rem;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    list-style: none;
+
+    @include responsive(SM) {
+      margin-top: 0.5rem;
+    }
+  }
+
+  &__links {
+    &:not(:last-of-type) {
+      margin-right: 1rem;
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited,
+    &:focus {
+      font-size: 1.6rem;
+      text-decoration: none;
+      font-weight: 500;
+      letter-spacing: 1px;
+      color: $color-white;
+      padding: 1.5rem;
+      outline: none;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      border-radius: 10rem;
+
+      @include responsive(MD) {
+        font-size: 1.4rem;
+        padding: 1rem;
+      }
+
+      @include responsive(SM) {
+        font-size: 1.2rem;
+        padding: 0.5rem;
+      }
+    }
+
+    &:hover,
+    &:active {
+      background-color: rgba($color-white, 0.15);
+      border-radius: 10rem;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+
+    /* Landscape */
+    @media only screen and (orientation: landscape) {
+      top: 60%;
+    }
+  }
+
+  &__heading {
+    font-weight: 300;
+    color: $color-white;
+    text-align: center;
+    line-height: 1.2;
+    width: 100%;
+    margin-bottom: 2.5rem;
+    padding: 0 1rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+
+    @include responsive(MD) {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__text {
+    font-size: 2rem;
+    color: $color-white;
+    margin: 0 auto 5rem auto;
+    max-width: 80%;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+
+    @include responsive(LG) {
+      // 1024px
+      font-size: 1.6rem;
+    }
+
+    @include responsive(MD) {
+      font-size: 1.4rem;
+      margin: 0 auto 3rem auto;
+    }
+
+    @include responsive(SM) {
+      font-size: 1.25rem;
+      margin: 0 auto 2rem auto;
+    }
+  }
+}

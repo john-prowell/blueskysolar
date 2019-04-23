@@ -1,0 +1,55 @@
+.section-heading {
+  font-weight: 300;
+  color: $color-primary-blue;
+  text-align: center;
+  margin-bottom: 4rem;
+  line-height: 1;
+}
+
+h1 {
+  font-size: 6rem;
+
+  @include responsive(LG) {
+    // 1024px
+    font-size: 5rem;
+  }
+
+  @include responsive(MD) {
+    font-size: 3.5rem;
+  }
+
+  @include responsive(SM) {
+    font-size: 3rem;
+  }
+}
+
+h2 {
+  font-size: 4rem;
+
+  @include responsive(LG) {
+    // 1024px
+    font-size: 3rem;
+  }
+}
+
+h3 {
+  font-size: 3rem;
+  @include responsive(LG) {
+    // 1024px
+    font-size: 2.5rem;
+  }
+}
+
+h4 {
+  font-size: 2rem;
+  @include responsive(LG) {
+    // 1024px
+    font-size: 1.6rem;
+  }
+}
+
+.section-subheading {
+  color: $color-primary-blue;
+  text-align: center;
+  margin-bottom: 1rem;
+}

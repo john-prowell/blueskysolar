@@ -1,0 +1,51 @@
+// MEDIA QUERY MANAGER
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == XS {
+    @media only screen and (max-width: 20em) {
+      @content;
+    } // 320px (600/16 = 37.5)
+  }
+
+  @if $breakpoint == SM {
+    @media only screen and (max-width: 30em) {
+      @content;
+    } // 480px (600/16 = 30)
+  }
+
+  @if $breakpoint == MD {
+    @media only screen and (max-width: 48em) {
+      @content;
+    } // 768px
+  }
+
+  @if $breakpoint == LG {
+    @media only screen and (max-width: 64em) {
+      @content;
+    } // 1024px
+  }
+
+  @if $breakpoint == XL {
+    @media only screen and (min-width: 80em) {
+      @content;
+    } //1280px
+  }
+}
+
+@mixin break-min($query) {
+  @media only screen and (min-width: + $query) {
+    @content;
+  }
+}
+
+@mixin break-max($query) {
+  @media (max-width: + $query) {
+    @content;
+  }
+}
+
+@mixin break-min-max($query, $query2) {
+  @media only screen and (min-width: + $query) and (max-width: + $query2) {
+    @content;
+  }
+}

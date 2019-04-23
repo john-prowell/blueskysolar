@@ -1,0 +1,88 @@
+.stats {
+  padding: 6rem 0 10rem 0;
+  color: $color-white;
+  background-color: $color-primary-blue;
+
+  @include responsive(MD) {
+    padding: 6rem 0 4rem;
+  }
+
+  @include responsive(SM) {
+    padding: 3rem 0 2rem;
+  }
+
+  & .row {
+    flex-direction: row;
+
+    @include responsive(MD) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item-wrapper {
+    @include responsive(MD) {
+      flex-basis: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 9rem;
+    }
+  }
+
+  &__item {
+    border: 2px solid $color-white;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    position: relative;
+
+    @include responsive(LG) {
+      // 1024px
+      width: 12rem;
+      height: 12rem;
+    }
+
+    @include responsive(SM) {
+      width: 10rem;
+      height: 10rem;
+    }
+  }
+
+  &__item-stat {
+    font-size: 4rem;
+    font-weight: 300;
+    width: 100%;
+    text-align: center;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @include responsive(LG) {
+      // 1024px
+      font-size: 3rem;
+    }
+
+    @include responsive(SM) {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__item-text {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    text-align: center;
+    margin-top: 16rem;
+
+    @include responsive(LG) {
+      // 1024px
+      margin-top: 13rem;
+      font-size: 1.4rem;
+    }
+
+    @include responsive(SM) {
+      margin-top: 11.5rem;
+    }
+  }
+}

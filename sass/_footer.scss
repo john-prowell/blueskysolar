@@ -1,0 +1,266 @@
+.footer {
+  background: $color-gray-light-1;
+  color: $color-primary-blue;
+
+  & .row {
+    padding: 6rem 0;
+    flex-direction: row;
+
+    @media only screen and (max-width: 45.9375em) {
+      flex-direction: column;
+    }
+
+    @include responsive(SM) {
+      padding: 4rem 0;
+    }
+  }
+
+  &__locations-wrapper,
+  &__phone-wrapper {
+    display: flex;
+    align-items: center;
+
+    @media only screen and (max-width: 45.9375em) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__locations-wrapper {
+    margin-bottom: 1.5rem;
+  }
+
+  &__info-icon {
+    fill: $color-primary-blue;
+    margin-right: 1rem;
+  }
+
+  &__info-icon--map {
+    width: 4.5rem;
+    height: 4.5rem;
+    margin-right: -0.65rem;
+
+    @include responsive(LG) {
+      // 1024px
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+
+  &__info-icon--phone {
+    width: 3.5rem;
+    height: 3.5rem;
+
+    @include responsive(LG) {
+      // 1024px
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  }
+
+  &__locations,
+  &__phone {
+    & p {
+      font-size: 2.5rem;
+      line-height: 1.25;
+
+      @include responsive(LG) {
+        // 1024px
+        font-size: 2rem;
+      }
+    }
+
+    & span {
+      font-size: 1.68rem;
+      @include responsive(LG) {
+        // 1024px
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  &__social {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    @media only screen and (max-width: 45.9375em) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__social-icons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    @include responsive(LG) {
+      // 1024px
+      justify-content: space-around;
+    }
+
+    & svg {
+      fill: $color-primary-blue;
+      width: 5rem;
+      height: 5rem;
+
+      @include responsive(LG) {
+        // 1024px
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+  }
+
+  &__cta {
+    position: relative;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    border: 2px solid $color-primary-blue;
+    padding: 0.3em 1em;
+    margin-top: 2.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.5s ease;
+    background-color: transparent;
+
+    @include responsive(LG) {
+      // 1024px
+      font-size: 1.4rem;
+      padding: 0.2em 0.5em;
+    }
+
+    @include responsive(MD) {
+      font-size: 1.2rem;
+      margin-top: 1.5rem;
+    }
+
+    & a {
+      &:link,
+      &:visited {
+        text-decoration: none;
+        color: $color-primary-blue;
+      }
+    }
+
+    &::after {
+      content: '>';
+      position: absolute;
+      opacity: 0;
+      margin-left: 1rem;
+      font-size: 2rem;
+      font-weight: 400;
+      line-height: 1em;
+      transition: all 0.2s;
+    }
+
+    &:hover {
+      transform: translateX(-1rem);
+      border: 2px solid transparent;
+      &::after {
+        content: '>';
+        opacity: 1;
+        position: absolute;
+        margin-left: 1rem;
+        text-shadow: none;
+        font-size: 2rem;
+        font-weight: 400;
+        font-style: normal;
+        font-variant: none;
+        line-height: 1em;
+        transition: all 0.2s;
+      }
+    }
+  }
+
+  &__tagline {
+    font-size: 2rem;
+    margin-top: 2rem;
+
+    @include responsive(LG) {
+      // 1024px
+      font-size: 1.85rem;
+    }
+
+    @include responsive(LG) {
+      // 1024px
+      font-size: 1.5rem;
+      margin-top: 1.5rem;
+    }
+  }
+
+  &__logo svg {
+    fill: $color-primary-blue;
+    width: 25rem;
+    height: 4rem;
+
+    @include responsive(LG) {
+      // 1024px
+      width: 18rem;
+      height: 3rem;
+    }
+  }
+
+  &__copyright {
+    margin: 0 auto;
+    background-color: $color-primary-blue;
+    padding: 1.5rem;
+    color: $color-white;
+    font-size: 1.5rem;
+
+    & p {
+      text-align: center;
+      font-size: 1.3rem;
+    }
+  }
+
+  &__link {
+    &,
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: $color-white;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    &:hover {
+      background: $color-white;
+      color: $color-primary-blue;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  }
+}
+
+#backToTop {
+  width: 4rem;
+  position: fixed;
+  bottom: 7.5rem;
+  right: 0;
+  background-color: $color-primary-blue;
+  font-size: 3rem;
+  text-align: center;
+  text-decoration: none;
+  color: $color-white;
+  cursor: pointer;
+  line-height: 4rem;
+  display: none;
+  transform: rotate(270deg);
+  z-index: 999;
+  border: 1px solid $color-white;
+
+  @include responsive(MD) {
+    width: 3rem;
+    font-size: 2rem;
+    line-height: 3rem;
+    bottom: 9.5rem;
+  }
+}
+#backToTop:hover {
+  background-color: $color-primary-blue;
+  color: white;
+}

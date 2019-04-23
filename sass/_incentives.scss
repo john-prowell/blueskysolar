@@ -1,0 +1,92 @@
+.incentives {
+  background: $color-primary-blue;
+  color: $color-white;
+
+  & .row {
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+
+    @include responsive(MD) {
+      flex-wrap: wrap;
+    }
+
+    @include break-max(37.5em) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__item {
+    font-size: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include responsive(LG) {
+      // 1024px
+      font-size: 1.5rem;
+    }
+
+    @include responsive(MD) {
+      font-size: 1.35rem;
+      text-align: center;
+      width: 50%;
+
+      &:nth-child(-n + 2) {
+        margin-bottom: 4rem;
+      }
+    }
+
+    @include break-max(37.5em) {
+      &:not(:last-child) {
+        margin-bottom: 4rem;
+      }
+    }
+  }
+
+  &__item-circle {
+    background: $color-white;
+    width: 11rem;
+    height: 11rem;
+    border-radius: 50%;
+    position: relative;
+    margin-bottom: 6rem;
+
+    @include responsive(LG) {
+      // 1024px
+      width: 10rem;
+      height: 10rem;
+      margin-bottom: 5rem;
+    }
+
+    @include responsive(MD) {
+      width: 8rem;
+      height: 8rem;
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  &__item-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    fill: $color-primary-blue;
+    width: 7rem;
+
+    @include responsive(LG) {
+      // 1024px
+      width: 6rem;
+    }
+
+    @include responsive(MD) {
+      width: 5rem;
+    }
+  }
+
+  &__item-text {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}

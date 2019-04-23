@@ -1,0 +1,14 @@
+.contact {
+  padding: 10rem 0;
+  background-image: linear-gradient(
+      rgba($color-primary-blue, 0.5),
+      rgba($color-primary-blue, 0.5)
+    ),
+    url('../../img/form_background.jpg');
+  background-size: cover;
+  background-position: center;
+
+  @include responsive(SM) {
+    padding: 4rem 0;
+  }
+}

@@ -1,0 +1,121 @@
+.plans {
+  h2 {
+    margin-bottom: 8rem;
+
+    @include responsive(MD) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  & .row {
+    align-items: stretch;
+  }
+
+  &__card {
+    flex-basis: 30%;
+    background-color: $color-white;
+    position: relative;
+    box-shadow: 0px 6px 30px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+
+    @include responsive(MD) {
+      margin-bottom: 2rem;
+    }
+
+    &:not(:last-child) {
+      margin-right: 2.5rem;
+
+      @include responsive(MD) {
+        margin-right: 0;
+      }
+    }
+
+    &:nth-child(2) {
+      transform: scale(1.2);
+      z-index: 100;
+
+      @include responsive(MD) {
+        transform: none;
+      }
+    }
+  }
+
+  &__content {
+    padding: 1.5rem 2.5rem;
+
+    @include responsive(MD) {
+      padding: 1.5rem 0;
+    }
+  }
+
+  &__header {
+    background: $color-primary-blue;
+    color: $color-white;
+    text-align: center;
+    width: 100%;
+    padding: 0.8rem 0;
+    font-size: 2rem;
+  }
+
+  &__heading {
+    color: $color-primary-blue;
+    font-weight: 300;
+    text-align: center;
+    padding-bottom: 1.5rem;
+    position: relative;
+    line-height: 1;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 6.5rem;
+      height: 1px;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      border-bottom: 1px solid $color-primary-blue;
+    }
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: $primary-text-color;
+    text-align: center;
+    padding: 1.5rem;
+
+    @include responsive(LG) {
+      // 1024px
+      font-size: 1.4rem;
+    }
+
+    @include responsive(MD) {
+      padding: 1.5rem 0 0;
+    }
+  }
+
+  &__link,
+  &:link,
+  &:visited {
+    font-size: 1.75rem;
+    font-weight: 300;
+    color: $color-primary-blue;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    padding-top: 1.5rem;
+
+    @include responsive(LG) {
+      // 1024px
+      font-size: 1.5rem;
+    }
+
+    &::after {
+      content: ' \00BB';
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
