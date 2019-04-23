@@ -11,7 +11,7 @@ npm install
 npm run build:css
 ```
 
-## Run on dev server
+## Run using live-server
 
 ```
 npm start
