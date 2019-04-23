@@ -19,4 +19,4 @@ npm start
 
 ### [View Demo](https://blueskysolar.netlify.com)
 
-Designed and coded by [John Prowell](http://www.johnprowell.dev)
+Designed and coded by <a href="http://www.johnprowell.dev/" target="_blank">John Prowell</a>
